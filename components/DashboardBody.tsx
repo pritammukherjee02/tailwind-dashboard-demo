@@ -11,7 +11,7 @@ interface Props {
 function DashboardBody({ showSearch }: Props) {
   return (
     <div className='overflow-hidden'>
-        <div className='max-w-[100rem] mx-auto px-4 sm:px-6 md:px-8'>
+        <div className='max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8'>
 
             <SideBar showSearch={showSearch} />
             <Content />

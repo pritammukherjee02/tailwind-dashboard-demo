@@ -10,7 +10,7 @@ interface Props {
 
 function SideBar({ showSearch }: Props) {
     return (
-        <div className='w-80 hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px, calc(50%-45rem))] right-auto pb-10 px-8 overflow-y-auto'>
+        <div className='w-80 hidden lg:block fixed z-20 inset-0 top-[3.8125rem] sidebar right-auto pb-10 px-8 overflow-y-auto'>
             <nav className='lg:text-sm lg:leading-6 relative'>
 
                 {/* Search Area */}

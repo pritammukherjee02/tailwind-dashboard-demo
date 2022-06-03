@@ -15,7 +15,7 @@ const Dashboard: NextPage = () => {
   }
 
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen font-inter'>
         <Head>
             <title>Tailwind Dashboard Demo</title>
             <link rel="icon" href="/favicon.ico" />
