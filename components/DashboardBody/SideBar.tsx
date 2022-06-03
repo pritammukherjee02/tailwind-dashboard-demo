@@ -10,9 +10,10 @@ function SideBar() {
             <nav className='lg:text-sm lg:leading-6 relative'>
 
                 {/* Search Area */}
-                <SearchArea />
+                {/* <SearchArea /> */}
 
                 {/* TopLevelLinks */}
+                <div className="h-8 bg-gradient-to-b from-white"></div>
                 <TopLevelLinks currentPage='Documentation' />
 
             </nav>

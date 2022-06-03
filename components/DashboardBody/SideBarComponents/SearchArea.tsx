@@ -15,7 +15,6 @@ function SearchArea() {
                     <span className="ml-auto pl-3 flex-none text-xs font-semibold">⌘K</span>
                 </button>
             </div>
-            <div className="h-8 bg-gradient-to-b from-white"></div>
         </div>
     )
 }
