@@ -4,12 +4,16 @@ import React from 'react'
 import Content from './DashboardBody/Content'
 import SideBar from './DashboardBody/SideBar'
 
-function DashboardBody() {
+interface Props {
+  showSearch: Boolean
+}
+
+function DashboardBody({ showSearch }: Props) {
   return (
     <div className='overflow-hidden'>
         <div className='max-w-[100rem] mx-auto px-4 sm:px-6 md:px-8'>
 
-            <SideBar />
+            <SideBar showSearch={showSearch} />
             <Content />
 
         </div>
