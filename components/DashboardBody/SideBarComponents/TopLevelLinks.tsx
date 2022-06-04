@@ -76,7 +76,7 @@ function TopLevelLinks({ currentPage }: Props) {
         {/* Getting Started */}
         <li className='mt-12 lg:mt-8'>
 
-            <h5 className='mb-8 lg:mb-3 font-semibold text-slate-900'>Getting Started</h5>
+            <h5 className='mb-8 lg:mb-3 font-medium text-slate-900'>Getting Started</h5>
             <ul className='space-y-6 lg:space-y-2 border-l border-slate-100'>
                 {subCategoryLinks.map(subCategoryLink => <SubCategoryLink name={subCategoryLink.name} link={subCategoryLink.href} currentPage={subCategoryLink.name == 'Installation'} />)}
             </ul>
