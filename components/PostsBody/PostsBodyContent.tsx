@@ -19,26 +19,9 @@ const posts = [
 function PostsBodyContent() {
   return (
     <div className="lg:ml-[19.5rem] lg:w-6/12 overflow-y-auto">
-        <main className='max-w-4xl mx-auto relative z-20 pt-10'>
+        <main className='max-w-4xl mx-auto relative z-20 pt-0 lg:pt-5'>
 
-            <header className='mb-10 md:flex md:items-start'>
-
-                <div className='flex-auto max-w-4xl'>
-                    <p className='mb-4 text-sm leading-6 font-medium text-sky-500'>Components</p>
-
-                    <h1 className='text-3xl sm:text-4xl font font-black text-slate-900 tracking-[-0.018em]'>Post Component</h1>
-
-                    <div className='font-thin tracking-[0.007em]'>
-
-                      <p className='mt-4 text-lg text-slate-700'>The posts for different websites to explore for the developer</p>
-                      <p className='mt-4 text-lg text-slate-700'>Component design showcase</p>
-                    </div>
-                    
-                </div>
-
-            </header>
-
-            <section className='flex py-1 pt-4 flex-col space-y-2 justify-between items-center'>
+            <section className='flex py-4 flex-col space-y-2 justify-between items-center'>
 
                 {posts.map((post, index) => <Post post={post} />)}
 

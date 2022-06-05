@@ -5,18 +5,22 @@ interface Props {
     post: any
 }
 
+// 16, 18 - size of heading
+// 14 - size of sub title
+// 12 - size of body
+
 function Post({ post }: Props) {
   return (
-    <div className='w-full flex flex-col pt-4 pb-3 rounded-2xl border-[1px] border-gray-100 shadow-md'>
+    <div className='w-full flex flex-col pt-4 pb-3 rounded-2xl border-[1px] bg-white border-gray-100 shadow-md'>
 
-        <h1 className='inline-block px-3 text-1xl sm:text-2xl font-extrabold text-slate-900 tracking-tight'>{post.title}</h1>
+        <h1 className='inline-block px-3 text-subheading text-slate-900'>{post.title}</h1>
 
-        <p className='my-2 mb-4 px-3 text-md font-thin tracking-[0.007em] leading-6 text-slate-600'>{post.description}</p>
+        <p className='my-2 mb-4 px-3 text-body text-slate-600'>{post.description}</p>
 
         <Image src={post.image} className='object-contain inline' width={690} height={388} objectFit='cover' />
         <div className='px-5 py-3 bg-gray-200'>
             <a href={post.link}>
-                <p className='font-medium mb-1 text-md text-slate-600 tracking-tight'>{post.title}</p>
+                <p className='font-medium text-base text-slate-600 tracking-tight'>{post.title}</p>
                 <p className='font-medium text-sm text-slate-500 tracking-tight'>{post.link}</p>
             </a>
         </div>
