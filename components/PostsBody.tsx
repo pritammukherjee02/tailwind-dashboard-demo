@@ -2,6 +2,7 @@ import React from 'react'
 
 //Components
 import SideBar from './DashboardBody/SideBar'
+import PostsAsidePanel from './PostsBody/PostsAsidePanel'
 import PostsBodyContent from './PostsBody/PostsBodyContent'
 
 interface Props {
@@ -15,6 +16,7 @@ function DashboardBody({  }: Props) {
 
             <SideBar currentPage='Posts' showSearch={false} />
             <PostsBodyContent />
+            <PostsAsidePanel />
 
         </div>
     </div>
