@@ -9,13 +9,12 @@ import NewPostBody from '../../components/New/NewPostBodies/NewPostBody'
 
 const New: NextPage = () => {
   return (
-    <div className='min-h-screen font-inter tracking-[0.005rem]'>
+    <div className='min-h-screen bg-gray-200 font-inter tracking-[0.005rem]'>
         <Head>
             <title>New Post</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <TailwindFloatingAccent />
         <Header toggleSearch={() => {}} />
 
         <NewPostBody />

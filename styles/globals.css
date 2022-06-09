@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 .sidebar {
     left: max(0px, calc(50% - 45rem));
 }
@@ -14,15 +20,18 @@
 
 .text-body {
     font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
-    line-height: 1.625;
+    line-height: 1.5rem;
+    letter-spacing: -0.004em;
 }
 
 .text-subheading {
     font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    /* font-size: 1.125rem; */
+    font-size: 1.2rem;
+    /* line-height: 1.75rem; */
+    line-height: 2rem;
     font-weight: 600;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
 }

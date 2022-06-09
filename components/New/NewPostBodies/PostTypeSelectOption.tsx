@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 
 interface Props {
@@ -10,8 +9,8 @@ interface Props {
 
 function PostTypeSelectOption({ title, description, svg, href }: Props) {
     return (
-        <Link href={href}>
-            <div className='border-[3px] hover:border-[#E7C7EF] cursor-pointer rounded-lg transition-colors'>
+        <a href={href}>
+            <div className='border-[2px] hover:border-[#E7C7EF] cursor-pointer rounded-lg transition-colors'>
                 <div className='p-4 flex items-center'>
                     {/* SVG Icon */}
                     <div className='w-12 h-12 bg-sky-400/20 rounded-full flex justify-center items-center mr-4'>
@@ -21,7 +20,7 @@ function PostTypeSelectOption({ title, description, svg, href }: Props) {
                     {/* Title and Desc */}
                     <div className='flex flex-col'>
                         <div className='max-w-none'>
-                            <p className='text-subheading !text-base mb-1'>{title}</p>
+                            <p className='text-subheading !text-sm mb-1'>{title}</p>
 
                             <p className='text-xs opacity-60 leading-4'>{description}</p>
                         </div>
@@ -33,7 +32,7 @@ function PostTypeSelectOption({ title, description, svg, href }: Props) {
                     </div>
                 </div>
             </div>
-        </Link>
+        </a>
     )
 }
 
