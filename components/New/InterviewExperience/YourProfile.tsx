@@ -6,11 +6,11 @@ import TextInputField from '../FieldComponents/TextInputField'
 //import ComboBox from '../FieldComponents/ComboBox'
 import SelectOneRadio from '../FieldComponents/SelectOneRadio'
 
-function NewInterviewexperience() {
+function YourProfile() {
   return (
     <div className='max-w-[712px] px-3 lg:px-0 flex flex-col justify-center mx-auto'>
         <div className='flex justify-between py-4'>
-            <h1 className='font-semibold text-xl tracking-[-0.3px]'>Interview Experience | Role Info</h1>
+            <h1 className='font-semibold text-xl tracking-[-0.3px]'>Interview Experience | Your Profile</h1>
 
             <a href='/' className='text-sm px-3 cursor-pointer py-2 font-medium opacity-60'>Cancel</a>
         </div>
@@ -72,4 +72,4 @@ function NewInterviewexperience() {
   )
 }
 
-export default NewInterviewexperience
+export default YourProfile
