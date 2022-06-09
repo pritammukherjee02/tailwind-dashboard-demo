@@ -3,9 +3,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 //Components
-import TailwindFloatingAccent from '../components/TailwindFloatingAccent'
-import Header from '../components/Header'
-import NewPostBody from '../components/NewPostBodies/NewPostBody'
+import TailwindFloatingAccent from '../../components/TailwindFloatingAccent'
+import Header from '../../components/Header'
+import NewPostBody from '../../components/New/NewPostBodies/NewPostBody'
 
 const New: NextPage = () => {
   return (
@@ -18,7 +18,7 @@ const New: NextPage = () => {
         <TailwindFloatingAccent />
         <Header toggleSearch={() => {}} />
 
-        <NewPostBody />        
+        <NewPostBody />
     </div>
   )
 }
