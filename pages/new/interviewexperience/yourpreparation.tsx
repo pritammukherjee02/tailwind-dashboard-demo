@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 //Components
 import Header from '../../../components/Header'
-import YourProfile from '../../../components/New/InterviewExperience/YourProfile'
+import YourPreparation from '../../../components/New/InterviewExperience/YourPreparation'
 
 const Project: NextPage = () => {
     return (
@@ -16,7 +16,7 @@ const Project: NextPage = () => {
 
             <Header toggleSearch={() => {}} />
 
-            <YourProfile />
+            <YourPreparation />
         </div>
     )
 }

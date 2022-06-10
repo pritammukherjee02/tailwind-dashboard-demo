@@ -15,7 +15,7 @@ function YourProfile() {
             <a href='/' className='text-sm px-3 cursor-pointer py-2 font-medium opacity-60'>Cancel</a>
         </div>
 
-		<div className="bg-white">
+		<div className="bg-white mb-4">
 			<div className="md:grid md:grid-cols-3 md:gap-6">
 				{/* <div className="md:col-span-1">
 					<div className="px-4 sm:px-0">
@@ -45,7 +45,7 @@ function YourProfile() {
 									</div>
 
 									<div className="col-span-6 sm:col-span-3">
-										<TextInputField description='We will not disturb you, but we need it to contact you in some urgency' name='phone-number' autoComplete='phone-number' labelTag='Your Phone Number' type='number' />
+										<TextInputField description='We will not disturb you, but we need it to contact you in some urgency' name='phone-number' autoComplete='phone-number' labelTag='Your Phone Number' type='text' />
 									</div>
 
 									<div className="col-span-6 sm:col-span-3">
@@ -90,7 +90,7 @@ function YourProfile() {
 									</button>
 								</Link>
 
-								<Link href='/new/interviewexperience/yourprofile'>
+								<Link href='/new/interviewexperience/yourpreparation'>
 									<button
 										type="submit"
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
