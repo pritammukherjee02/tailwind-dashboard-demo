@@ -12,7 +12,7 @@ interface Props {
 function TextMultilineField({ label, name, rows = 3, placeholder = '', defaultValue = '', description = '' }: Props) {
   return (
     <div>
-        <label htmlFor={name} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={name} className="block text-sm font-semibold text-gray-700">
             {label}
         </label>
         <div className="mt-1">

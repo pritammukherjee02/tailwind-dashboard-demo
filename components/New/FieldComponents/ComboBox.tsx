@@ -3,15 +3,15 @@ import React from 'react'
 interface Props {
     name: string,
     autoComplete: string,
-    labelTag: String,
+    labelTag?: String,
     optionsArray: Array<string>
 }
 
 function ComboBox({ name, autoComplete, labelTag, optionsArray }: Props) {
   return (
     <div>
-        <label htmlFor={name} className="block text-sm font-medium text-gray-700">
-            Country
+        <label htmlFor={name} className="block text-sm text-gray-700">
+            {labelTag}
         </label>
         <select
             id={name}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 //FieldComponents
@@ -8,6 +8,8 @@ import SelectOneRadio from '../FieldComponents/SelectOneRadio'
 import TextMultilineField from '../FieldComponents/TextMultilineField'
 
 function NumberOfRounds() {
+	const [numberOfRounds, setNumberOfRounds] = useState(1)
+
   return (
     <div className='max-w-[712px] px-3 lg:px-0 flex flex-col justify-center mx-auto'>
         <div className='flex justify-between py-4'>
@@ -33,7 +35,7 @@ function NumberOfRounds() {
 								<div className="grid grid-cols-6 gap-6">
 
 									<div className="col-span-6 sm:col-span-3">
-										<TextInputField description='Maximum 8 are allowed.' type='number' name='number-of-rounds' autoComplete='number-of-rounds' labelTag='How many rounds were there?' />
+										<TextInputField setState={setNumberOfRounds} description='Maximum 8 are allowed.' type='number' name='number-of-rounds' autoComplete='number-of-rounds' labelTag='How many rounds were there?' />
 									</div>
 
 								</div>
@@ -47,7 +49,7 @@ function NumberOfRounds() {
 									</button>
 								</Link>
 
-								<Link href='/new/interviewexperience/'>
+								<Link href={'/new/interviewexperience/round/1?total=' + numberOfRounds}>
 									<button
 										type="submit"
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

@@ -43,7 +43,7 @@ function NewInterviewexperience() {
 									</div>
 
 									<fieldset className='col-span-6'>
-										<legend className="block text-sm font-medium text-gray-700 mb-2">Did you get an offer?</legend>
+										<legend className="block text-sm font-semibold text-gray-700 mb-2">Did you get an offer?</legend>
 
 										<SelectOneRadio choices={['Yes', 'No']} />
 									</fieldset>

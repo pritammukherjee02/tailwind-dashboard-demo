@@ -31,7 +31,7 @@ function YourProfile() {
 							<div className="px-4 py-5 bg-white sm:p-6">
 								<div className="grid grid-cols-6 gap-6">
                                     <fieldset className='col-span-6'>
-										<legend className="block text-sm font-medium text-gray-700 mb-2">Post as anonymous</legend>
+										<legend className="block text-sm font-semibold text-gray-700 mb-2">Post as anonymous</legend>
 
 										<SelectOneRadio choices={['Yes', 'No']} />
 									</fieldset>
@@ -65,13 +65,13 @@ function YourProfile() {
 									</div>
 
                                     <fieldset className='col-span-6'>
-										<legend className="block text-sm font-medium text-gray-700 mb-2">Years Of Experience You Have?</legend>
+										<legend className="block text-sm font-semibold text-gray-700 mb-2">Years Of Experience You Have?</legend>
 
 										<SelectOneRadio choices={['Fresher', '0-3 Years', '3+ Years']} />
 									</fieldset>
 
                                     <fieldset className='col-span-6'>
-										<legend className="block text-sm font-medium text-gray-700 mb-2">Do you want to tell about your previous experiences? (Maximum 3 experiences)</legend>
+										<legend className="block text-sm font-semibold text-gray-700 mb-2">Do you want to tell about your previous experiences? (Maximum 3 experiences)</legend>
 
 										<SelectOneRadio choices={['Yes', 'No']} />
 
