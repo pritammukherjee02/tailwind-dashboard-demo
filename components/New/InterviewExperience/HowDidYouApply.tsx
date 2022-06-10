@@ -7,11 +7,11 @@ import TextInputField from '../FieldComponents/TextInputField'
 import SelectOneRadio from '../FieldComponents/SelectOneRadio'
 import TextMultilineField from '../FieldComponents/TextMultilineField'
 
-function YourPreparation() {
+function HowDidYouApply() {
   return (
     <div className='max-w-[712px] px-3 lg:px-0 flex flex-col justify-center mx-auto'>
         <div className='flex justify-between py-4'>
-            <h1 className='font-semibold text-xl tracking-[-0.3px]'>Interview Experience | How did you prepare?</h1>
+            <h1 className='font-semibold text-xl tracking-[-0.3px]'>Interview Experience | How did you apply?</h1>
 
             <a href='/' className='text-sm px-3 cursor-pointer py-2 font-medium opacity-60'>Cancel</a>
         </div>
@@ -32,25 +32,35 @@ function YourPreparation() {
 							<div className="px-4 py-5 bg-white sm:p-6">
 								<div className="grid grid-cols-6 gap-6">
 
-									<div className="col-span-6">
-										<TextMultilineField description='Ex - Data Structures, Pointers, OOPS, System Design, Algorithms, Dynamic Programming' name='prepared-topics' label='Top topics you prepared? (Mention atleast 5 with comma seperated)' rows={5} placeholder='' defaultValue='' />
-									</div>
+                                    <fieldset className='col-span-6 sm:col-span-3'>
+										<legend className="block text-sm font-medium text-gray-700 mb-2">Where did you apply?</legend>
+
+										<SelectOneRadio choices={['On Campus', 'Off Campus']} />
+									</fieldset>
 
 									<div className="col-span-6 sm:col-span-3">
-										<TextInputField description='Ex- 2.5 months, 6 months' type='text' name='durationOfPreparation' autoComplete='durationOfPreparation' labelTag='Duration Of Preparation(In months) ' />
+										<TextInputField description='Referral/Hacerrank/Leetcode etc.' type='text' name='off-campus-source' autoComplete='off-campus-source' labelTag='Can you specify the source of off Campus? (If applicable)' />
 									</div>
 
 									<div className="col-span-6">
-										<TextMultilineField description={`Ex - Tip 1 - Practice Atleast 250 Questions`} name='prepared-topics' label='Preparation Tips (Mention atleast two tips line seperated)' rows={5} placeholder='' defaultValue='' />
+										<TextInputField description='Above 7 CGPA, No criteria, Need two development projects on Resume' type='text' name='eligibilityCriteria' autoComplete='eligibilityCriteria' labelTag='Any eligibility criteria?' />
+									</div>
+
+									<div className="col-span-6">
+										<TextMultilineField description={`Ex: Tip 1 : Have some projects on resume.`} name='resume-tips' label='Resume Tips(Atleast two)' rows={5} placeholder='' defaultValue='' />
                                         <p className="text-sm text-gray-500">
-                                            Tip 2 - Ex- Do atleast 2 projects
+                                            Tip 2: Do not put false things on resume.
                                         </p>
+									</div>
+
+									<div className="col-span-6">
+										<TextMultilineField description='' name='shortlisting-reason' label='Why do you think you were shortlisted?' rows={5} placeholder='' defaultValue='' />
 									</div>
 
 								</div>
 							</div>
 							<div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-								<Link href='/new/interviewexperience/yourprofile'>
+								<Link href='/new/interviewexperience/yourpreparation'>
 									<button
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md mr-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 									>
@@ -58,7 +68,7 @@ function YourPreparation() {
 									</button>
 								</Link>
 
-								<Link href='/new/interviewexperience/howdidyouapply'>
+								<Link href='/new/interviewexperience/numberofrounds'>
 									<button
 										type="submit"
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -76,4 +86,4 @@ function YourPreparation() {
   )
 }
 
-export default YourPreparation
+export default HowDidYouApply
