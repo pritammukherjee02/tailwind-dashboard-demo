@@ -20,7 +20,7 @@ function TextMultilineField({ label, name, rows = 3, placeholder = '', defaultVa
             id={name}
             name={name}
             rows={rows}
-            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+            className="shadow-sm text-base py-[15px] px-[20px] rounded-[15px] focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
             placeholder={placeholder}
             defaultValue={defaultValue}
             />

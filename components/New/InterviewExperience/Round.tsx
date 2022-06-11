@@ -18,12 +18,8 @@ function Round({ round, total }: Props) {
 	const addQuestionNumber = () => {
 		const tempArr = questionNumbersArr
 		tempArr.push(questionNumbersArr[questionNumbersArr.length - 1] + 1)
-		setQuestionNumbersArr(tempArr)
+		setQuestionNumbersArr([...tempArr])
 	}
-
-	useEffect(() => {
-		console.log(questionNumbersArr)
-	}, questionNumbersArr)
 
   return (
     <div className='max-w-[712px] px-3 lg:px-0 flex flex-col justify-center mx-auto'>
@@ -93,19 +89,22 @@ function Round({ round, total }: Props) {
 
 										<p className='mt-1 mb-5 text-sm font-medium'>Please specify each problem in detail with proper statement or references.<br/>This is the major contribution for your interview experience.</p>
 
-										{questionNumbersArr.map((index) => <RoundQuestion problemNumber={index} />)}
-										<div
+										<QuestionSection questionNumbersArr={questionNumbersArr} />
+
+										<button
 											onClick={addQuestionNumber}
+											type='button'
 											className="inline-flex justify-center mt-4 cursor-pointer py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 										>
 											Add a question
-										</div>
+										</button>
 									</div>
 
 								</div>
 							</div>
+
 							<div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-								<Link href='/new/interviewexperience/yourpreparation'>
+								<Link href={(round == 1) ? '/new/interviewexperience/numberofrounds' : `/new/interviewexperience/round/${Number(round)-1}?total=${total}`}>
 									<button
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md mr-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 									>
@@ -113,12 +112,12 @@ function Round({ round, total }: Props) {
 									</button>
 								</Link>
 
-								<Link href='/new/interviewexperience/numberofrounds'>
+								<Link href={(round == total) ? '/explore' : `/new/interviewexperience/round/${Number(round)+1}?total=${total}`}>
 									<button
 										type="submit"
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 									>
-										Next
+										{(round == total) ? 'Submit' : 'Next'}
 									</button>
 								</Link>
 							</div>
@@ -129,6 +128,18 @@ function Round({ round, total }: Props) {
 		</div>
     </div>
   )
+}
+
+interface QSProps {
+	questionNumbersArr: Array<any>
+}
+
+const QuestionSection = ({ questionNumbersArr }: QSProps) => {
+	return (
+		<div className='flex flex-col gap-3'>
+			{questionNumbersArr.map((index) => <RoundQuestion problemNumber={index} />)}
+		</div>
+	)
 }
 
 export default Round
