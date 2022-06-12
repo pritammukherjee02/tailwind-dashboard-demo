@@ -12,7 +12,7 @@ interface Props {
 function TextInputField({ name, autoComplete, labelTag, description, type = 'text', setState = () => {} }: Props) {
   return (
     <div className='text-body'>
-        <label htmlFor={name} className="block text-sm font-semibold text-gray-700">
+        <label htmlFor={name} className="block font-normal text-[15px] leading-6 text-gray-700">
             {labelTag}
         </label>
         <input

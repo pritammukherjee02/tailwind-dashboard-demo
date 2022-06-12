@@ -25,7 +25,7 @@ const RadioOption = ({ name, label }: RadioOptionProps) => (
             type="radio"
             className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
         />
-        <label htmlFor={name} className="ml-3 block text-sm font-semibold text-gray-700">
+        <label htmlFor={name} className="ml-3 block font-normal text-[15px] leading-6 text-gray-700">
             {label}
         </label>
     </div>

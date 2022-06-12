@@ -15,12 +15,12 @@ function Post({ post }: Props) {
 
         <h1 className='inline-block px-3 text-subheading text-slate-900'>{post.title}</h1>
 
-        <p className='my-2 mb-4 px-3 text-body text-slate-600'>{post.description}</p>
+        <p className='my-4 mb-8 px-3 text-body text-black'>{post.description}</p>
 
         <Image src={post.image} className='object-contain inline' width={690} height={388} objectFit='cover' />
         <div className='px-5 py-3 bg-gray-200'>
             <a href={post.link}>
-                <p className='font-medium text-base text-slate-600 tracking-tight'>{post.title}</p>
+                <p className='font-medium text-base text-slate-700 tracking-tight'>{post.title}</p>
                 <p className='font-medium text-sm text-slate-500 tracking-tight'>{post.link}</p>
             </a>
         </div>

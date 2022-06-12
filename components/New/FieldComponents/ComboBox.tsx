@@ -11,7 +11,7 @@ interface Props {
 function ComboBox({ name, autoComplete, labelTag, optionsArray, setState }: Props) {
   return (
     <div>
-        <label htmlFor={name} className="block font-semibold text-sm text-gray-700">
+        <label htmlFor={name} className="block font-normal text-[15px] leading-6 text-gray-700">
             {labelTag}
         </label>
 

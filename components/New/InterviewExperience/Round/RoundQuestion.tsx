@@ -9,7 +9,7 @@ interface Props {
 }
 
 function RoundQuestion({ problemNumber }: Props) {
-	const [problemType, setProblemType] = useState(null)
+	const [problemType, setProblemType] = useState('Coding Problem')
 
 	const questionSetMarkup = problemType != null ? (problemType == 'Coding Problem') ? (
 		<div className='col-span-6 grid grid-cols-6 gap-6'>
